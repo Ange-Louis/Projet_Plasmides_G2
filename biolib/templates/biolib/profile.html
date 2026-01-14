@@ -1,9 +1,32 @@
 {% extends "biolib/base.html" %}
 
-{% block title %}Accueil - InSillyClo{% endblock %}
-
 {% block content %}
-<div class="text-center my-5">
-    <h1 class="display-4">Profile</h1>
+<div class="container mt-5">
+    <h2>Profil</h2>
+
+    <div class="row">
+        <!-- Colonne de gauche : Links -->
+        <div class="col-md-3">
+            <div class="card">
+                <div class="card-header">
+                    <h5>{{ user.username }}</h5>
+                </div>
+                <div class="card-body">
+                    <div class="mb-3">
+                        <a> Données personnelles</a>
+                    </div>
+                    <div class="mb-3">
+                        <a> Paramètres du compte</a>
+                    </div>
+                    <div class="mb-3">
+                        <a> Historique des activités</a>
+                    </div>
+                    <div class="mb-3">
+                        <a> Equipes</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
 {% endblock %}

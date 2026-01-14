@@ -1,5 +1,5 @@
 # Projet_Plasmides_G2 – Gestion de Plasmides et Données Biologiques
-**Auteurs** : Groupe 2 (Master AMI2B - Université Paris Saclay)
+**Auteurs** : Pauline, Agash, Moustapha, Ange-Louis - Groupe 2 (Master AMI2B - Université Paris Saclay)
 **Contexte** : Conception d’une application web pour aider à l’assemblage de plasmides en utilisant des techniques de MoClo et de Golden Gate Assembly
 
 ---
@@ -17,6 +17,10 @@
 ```bash
 git clone https://github.com/Ange-Louis/Projet_Plasmides_G2.git
 cd Projet_Plasmides_G2
+git checkout -b MAQUETTE origin/MAQUETTE
+# git checkout -b AGASH origin/AGASH 
+# pour accéder à la bonne implémentation des BD
+# le Merge entre toutes les branches n'ayant pas encore été fait
 ```
 
 ### 2. Créer un environnement virtuel

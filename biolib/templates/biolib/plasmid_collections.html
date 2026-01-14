@@ -1,0 +1,142 @@
+{% extends "biolib/base.html" %}
+
+{% block content %}
+<div class="container mt-5">
+    <h2>Recherche de collections de plasmides</h2>
+
+    <div class="row">
+        <!-- Colonne de gauche : Filtres -->
+        <div class="col-md-3">
+            <div class="card">
+                <div class="card-header">
+                    <h5>Filtres</h5>
+                </div>
+                <div class="card-body">
+                    <div class="mb-3">
+                        <label class="form-label">Date d'ajout</label>
+                        <input type="date" class="form-control" id="dateFilter">
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Recherche par mot-clé</label>
+                        <input type="text" class="form-control" placeholder="Nom, gène, résistance, description...">
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Visibilité</label>
+                        <select class="form-select">
+                            <option>Tous</option>
+                            <option>Publics</option>
+                            <option>Privés</option>
+                        </select>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Type de vecteur</label>
+                        <select class="form-select">
+                            <option>Tous</option>
+                            <option>Expression</option>
+                            <option>Clonage</option>
+                            <option>CRISPR</option>
+                            <option>Lentiviral</option>
+                        </select>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Résistance</label>
+                        <select class="form-select">
+                            <option>Toutes</option>
+                            <option>Ampicilline</option>
+                            <option>Kanamycine</option>
+                            <option>Chloramphénicol</option>
+                            <option>Tétracycline</option>
+                        </select>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Organisme hôte</label>
+                        <select class="form-select">
+                            <option>Tous</option>
+                            <option>E. coli</option>
+                            <option>S. cerevisiae</option>
+                            <option>Cellules mammifères</option>
+                        </select>
+                    </div>
+                    <button class="btn btn-primary w-100">Appliquer les filtres</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Colonne centrale : Liste des plasmides -->
+        <div class="col-md-6">
+            <div class="card">
+                <div class="card-header">
+                    <h5>Collections de plasmides disponibles</h5>
+                </div>
+                <div class="card-body">
+                    <!-- Plasmide 1 -->
+                    <div class="card mb-3">
+                        <div class="card-body">
+                            <a href="#" class="text-decoration-none">
+                                <h6 class="card-title">pET28a-GFP</h6>
+                            </a>
+                            <p class="card-text">
+                                <strong>Type :</strong> Expression<br>
+                                <strong>Résistance :</strong> Kanamycine<br>
+                                <strong>Organisme :</strong> E. coli<br>
+                                <strong>Gène d'intérêt :</strong> GFP<br>
+                                <strong>Promoteur :</strong> T7<br>
+                                <strong>Date d'ajout :</strong> 10/01/2026<br>
+                                <strong>Description :</strong> Vecteur d'expression pour protéines fusionnées à la GFP, inductible par IPTG.
+                            </p>
+                            <div class="d-flex justify-content-between">
+                                <span class="badge bg-success">Public</span>
+                                <a href="#" class="btn btn-sm btn-outline-secondary">Voir détails</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Plasmide 2 -->
+                    <div class="card mb-3">
+                        <div class="card-body">
+                            <a href="#" class="text-decoration-none">
+                                <h6 class="card-title">pYES2-CT</h6>
+                            </a>
+                            <p class="card-text">
+                                <strong>Type :</strong> Expression<br>
+                                <strong>Résistance :</strong> Ampicilline<br>
+                                <strong>Organisme :</strong> S. cerevisiae<br>
+                                <strong>Gène d'intérêt :</strong> -<br>
+                                <strong>Promoteur :</strong> GAL1<br>
+                                <strong>Date d'ajout :</strong> 05/01/2026<br>
+                                <strong>Description :</strong> Vecteur d'expression pour levure, inductible par galactose.
+                            </p>
+                            <div class="d-flex justify-content-between">
+                                <span class="badge bg-warning text-dark">Privé (Équipe A)</span>
+                                <a href="#" class="btn btn-sm btn-outline-secondary">Voir détails</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Pagination -->
+            <nav aria-label="Page navigation">
+                <ul class="pagination">
+                    <li class="page-item disabled"><a class="page-link" href="#">Précédent</a></li>
+                    <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                    <li class="page-item"><a class="page-link" href="#">2</a></li>
+                    <li class="page-item"><a class="page-link" href="#">3</a></li>
+                    <li class="page-item"><a class="page-link" href="#">Suivant</a></li>
+                </ul>
+            </nav>
+        </div>
+
+        <!-- Colonne de droite : Actions -->
+        <div class="col-md-3">
+            <div class="card">
+                <div class="card-body text-center">
+                    <h5>Actions rapides</h5>
+                    <p>Gérez vos collections de plasmides.</p>
+                    <a href="#" class="btn btn-primary btn-lg d-block mb-2">Ajouter un plasmide</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

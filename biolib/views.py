@@ -32,6 +32,10 @@ def template_detail(request):
     return render(request, 'biolib/template_detail.html')
 
 
+def plasmid_collections(request):
+    return render(request, 'biolib/plasmid_collections.html')
+
+
 def simulation(request):
     if request.method == 'POST':
         # Récupérer les fichiers uploadés

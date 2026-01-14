@@ -37,6 +37,7 @@ urlpatterns = [
     path('create_template/', views.create_template, name='create_template'),
     path('simulation/result/', views.simulation_result, name='simulation_result'),
     path('template/detail/', views.template_detail, name='template_detail'),
+    path('plasmid_collections/', views.plasmid_collections, name='plasmid_collections'),
 
     # autre
     path('download_empty_template/', views.download_empty_template, name='download_empty_template'),
